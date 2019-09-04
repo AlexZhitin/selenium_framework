@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Suite" parallel="tests" thread-count="3">
+
+    <listeners>
+        <listener class-name="Base.TestListener"/>
+        <listener class-name="Base.RetryListener"/>
+    </listeners>
+
+    <parameter name="appURL" value="https://dev-influencer.seriea.bkstg.it"/>
+
+    <test verbose="2" preserve-order="true" name="Chrome_tests">
+        <parameter name="browserType" value="chrome"/>
+        <classes>
+
+            <class name="Tests.NotifyCuspTest">
+                <methods>
+                    <include name="FullNameFieldIsDisplayed"/>
+                    <include name="SendButtonIsDisabledIfDescriptionIsEmpty"/>
+                    <!--<include name="ErrorUsernameUnderscoreDotBeginning"/>
+                    <include name="ErrorUsernameUnderscoreDotEnd"/>
+                    <include name="ErrorUsernameContainsSpace"/>
+                    <include name="UsernameUnderscoreDotAllowedWithin"/>-->
+                    <!--<include name="UsernameContainsSpecSymbols"/>
+                    <include name="FirstNameCanContainASCII"/>
+                    <include name="FirstNameEndsWithSpace"/>
+                    <include name="FirstNameBeginsWithSpace"/>
+                    <include name="FirstNameContainsEmoji"/>
+                    <include name="FirstNameContainsSpecialSymbols"/>-->
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test verbose="2" preserve-order="true" name="Firefox_tests">
+        <parameter name="browserType" value="firefox"/>
+        <classes>
+            <class name="Tests.NotifyCuspTest">
+                <methods>
+                    <include name="FullNameFieldIsDisplayed"/>
+                    <include name="SendButtonIsDisabledIfDescriptionIsEmpty"/>
+                    <!--<include name="ErrorUsernameUnderscoreDotBeginning"/>
+                    <include name="ErrorUsernameUnderscoreDotEnd"/>
+                    <include name="ErrorUsernameContainsSpace"/>
+                    <include name="UsernameUnderscoreDotAllowedWithin"/>-->
+                    <!--<include name="UsernameContainsSpecSymbols"/>
+                    <include name="FirstNameCanContainASCII"/>
+                    <include name="FirstNameEndsWithSpace"/>
+                    <include name="FirstNameBeginsWithSpace"/>
+                    <include name="FirstNameContainsEmoji"/>
+                    <include name="FirstNameContainsSpecialSymbols"/>-->
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test verbose="2" preserve-order="true" name="Safari_tests">
+        <parameter name="browserType" value="safari"/>
+        <classes>
+            <class name="Tests.NotifyCuspTest">
+                <methods>
+                    <include name="FullNameFieldIsDisplayed"/>
+                    <include name="SendButtonIsDisabledIfDescriptionIsEmpty"/>
+                    <!--<include name="ErrorUsernameUnderscoreDotBeginning"/>
+                    <include name="ErrorUsernameUnderscoreDotEnd"/>
+                    <include name="ErrorUsernameContainsSpace"/>
+                    <include name="UsernameUnderscoreDotAllowedWithin"/>-->
+                    <!--<include name="UsernameContainsSpecSymbols"/>
+                    <include name="FirstNameCanContainASCII"/>
+                    <include name="FirstNameEndsWithSpace"/>
+                    <include name="FirstNameBeginsWithSpace"/>
+                    <include name="FirstNameContainsEmoji"/>
+                    <include name="FirstNameContainsSpecialSymbols"/>-->
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>

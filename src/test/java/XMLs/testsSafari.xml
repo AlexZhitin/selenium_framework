@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Safari suite">
+
+    <listeners>
+        <listener class-name="Base.TestListener"/>
+        <listener class-name="Base.RetryListener"/>
+    </listeners>
+
+    <parameter name="browserType" value="safari"/>
+    <parameter name="appURL" value="https://dev-influencer.seriea.bkstg.it"/>
+
+    <test verbose="2" preserve-order="true" name="Safari test cases">
+        <classes>
+            <!--<class name="Tests.SignInTest"/>-->
+            <!--<class name="Tests.ClipDetailsTest"/>-->
+            <class name="Tests.PermissionsTest">
+                <methods>
+                    <include name="UsersSectionIsNotAvailableForInfluencer"/>
+                    <!--<include name="ErrorUsernameUnderscoreDotBeginning"/>
+                    <include name="ErrorUsernameUnderscoreDotEnd"/>
+                    <include name="ErrorUsernameContainsSpace"/>
+                    <include name="UsernameUnderscoreDotAllowedWithin"/>-->
+                    <!--<include name="UsernameContainsSpecSymbols"/>
+                    <include name="FirstNameCanContainASCII"/>
+                    <include name="FirstNameEndsWithSpace"/>
+                    <include name="FirstNameBeginsWithSpace"/>
+                    <include name="FirstNameContainsEmoji"/>
+                    <include name="FirstNameContainsSpecialSymbols"/>-->
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>

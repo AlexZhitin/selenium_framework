@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Chrome suite" parallel="classes" thread-count="2">
+
+    <listeners>
+        <listener class-name="Base.TestListener"/>
+        <listener class-name="Base.RetryListener"/>
+    </listeners>
+
+    <parameter name="browserType" value="chrome"/>
+    <parameter name="appURL" value="https://dev-influencer.seriea.bkstg.it"/>
+
+    <test verbose="2" preserve-order="true" name="Chrome_tests">
+        <classes>
+            <class name="Tests.Profile.Own.ClipsPageTest"/>
+            <class name="Tests.Profile.Own.EditProfileOwnTest"/>
+            <class name="Tests.Profile.Own.MyVideosTest"/>
+            <class name="Tests.Profile.Own.ProfileGeneralOwnTest"/>
+            <class name="Tests.Profile.Own.SearchesPageTest"/>
+
+            <class name="Tests.Profile.User.EditProfileUserTest"/>
+            <class name="Tests.Profile.User.ProfileGeneralUserTest"/>
+
+            <class name="Tests.TopBar.HashtagSearchTest"/>
+            <class name="Tests.TopBar.TopBarTest"/>
+
+            <class name="Tests.AddUserTest"/>
+            <!--<class name="Tests.AggregatedPageTest"/>-->
+            <class name="Tests.ClipDetailsTest"/>
+            <class name="Tests.FiltersTest"/>
+            <class name="Tests.ForgotPasswordPageTest"/>
+            <!--<class name="Tests.GameScheduleTest"/>-->
+            <!--<class name="Tests.HighlightsSectionTest"/>-->
+            <class name="Tests.LeagueSectionTest"/>
+            <!--<class name="Tests.LiveSectionTest"/>-->
+            <class name="Tests.NotifyCuspTest"/>
+            <class name="Tests.SearchResultsPageTest"/>
+            <class name="Tests.SharingModalTest"/>
+            <class name="Tests.SignInTest"/>
+            <class name="Tests.UsersPageTest"/>
+            <class name="Tests.PermissionsTest">
+
+            </class>
+        </classes>
+    </test>
+</suite>
