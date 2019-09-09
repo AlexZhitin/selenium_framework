@@ -25,4 +25,9 @@
 hs_err_pid*
 .idea
 *.iml
+*.html
+*html.icloud
 .idea.workspace.xml
+Test-ScreenShots/
+src/main/java/
+target/generated-test-sources/
