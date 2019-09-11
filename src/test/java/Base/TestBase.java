@@ -3,16 +3,21 @@ package Base;
 import com.aventstack.extentreports.ExtentReports;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.safari.SafariDriver;
 import org.testng.annotations.*;
 
 import java.io.IOException;
 import java.util.concurrent.TimeUnit;
 
+
 public class TestBase {
-  public static ThreadLocal<WebDriver> dr = new ThreadLocal<>();
+
   WebDriver driver;
+  public ThreadLocal<WebDriver> dr = new ThreadLocal<>();
+
   private String osname = System.getProperty("os.name");
   private static String driverPath = System.getProperty("user.dir") + "/src/main/resources/";
 

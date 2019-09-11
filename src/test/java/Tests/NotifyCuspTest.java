@@ -9,6 +9,8 @@ import Pages.SignInPage;
 import Pages.TopBar.TopBarSection;
 import com.aventstack.extentreports.Status;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.remote.SessionId;
 import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
@@ -18,7 +20,7 @@ public class NotifyCuspTest extends TestBase{
 
     @BeforeMethod
     public void setUp() {
-        driver = getDriver();
+        this.driver = getDriver();
     }
 
     @Test /*C39253*/

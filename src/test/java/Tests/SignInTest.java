@@ -15,7 +15,7 @@ import java.util.concurrent.TimeUnit;
 
 public class SignInTest extends TestBase {
 
-  private WebDriver driver;
+  WebDriver driver;
 
   @BeforeMethod
   public void setUp() {
