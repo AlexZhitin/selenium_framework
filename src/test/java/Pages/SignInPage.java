@@ -13,7 +13,7 @@ import java.util.concurrent.TimeUnit;
 public class SignInPage {
 
 
-    protected WebDriver driver;
+    private WebDriver driver;
 
     /*Create elements with locators*/
 
@@ -80,9 +80,16 @@ public class SignInPage {
     public void LoginGlobalAdmin() {
         try {
             WebDriverWait wait = new WebDriverWait(driver, 10);
-            driver.findElement(email).sendKeys(validGlobalAdminEmail);
-            driver.findElement(password).sendKeys(validPasswordCommon);
-            driver.findElement(loginButton).click();
+
+            WebElement emailField = driver.findElement(email);
+            emailField.sendKeys(validGlobalAdminEmail);
+
+            WebElement passwordField = driver.findElement(password);
+            passwordField.sendKeys(validPasswordCommon);
+
+            WebElement button = driver.findElement(loginButton);
+            button.click();
+
             wait.until(ExpectedConditions.visibilityOfElementLocated(logo));
         } catch (Throwable e) {
             ExtentTestManager.getTest().log(Status.INFO, e);

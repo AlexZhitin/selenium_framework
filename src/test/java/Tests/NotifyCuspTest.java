@@ -20,7 +20,7 @@ public class NotifyCuspTest extends TestBase{
 
     @BeforeMethod
     public void setUp() {
-        this.driver = getDriver();
+        driver = getDriver();
     }
 
     @Test /*C39253*/
@@ -84,7 +84,7 @@ public class NotifyCuspTest extends TestBase{
 
     @Test /*C39255*/
 
-    public void SendButtonIsDisabledIfDescriptionIsEmpty() {
+    public void SendButtonIsDisabledIfDescriptionIsEmpty() throws InterruptedException {
 
         SignInPage login = new SignInPage(driver);
         TopBarSection profileIcon = new TopBarSection(driver);
