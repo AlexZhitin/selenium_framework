@@ -8,8 +8,8 @@
     </listeners>
 
     <!--Following scenario configurations would be successful:
-    1. suite name="Suite" parallel="tests" thread-count="3" where the count number equals the number of tests
-    2. each test can run classes in parallel with the thread-count >2 (2 recommended as tests may go unstable if more than 2)
+    1. Suite name="Suite" parallel="tests" thread-count="3" where the count number equals the number of tests
+    2. Each test can run classes in parallel with the thread-count >2 (2 recommended as tests may go unstable if more than 2)
     3. Safari and Edge can be run only in one thread, so thread-count="1"-->
 
     <parameter name="appURL" value="https://dev-influencer.seriea.bkstg.it"/>
