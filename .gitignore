@@ -31,4 +31,4 @@ hs_err_pid*
 Test-ScreenShots/
 src/main/java/
 target/generated-test-sources/
-.idea/workspace.xml
+.DS_Store
